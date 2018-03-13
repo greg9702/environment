@@ -7,3 +7,5 @@ i3-msg "workspace 1; exec google-chrome-stable"
 i3-msg "workspace 1; exec urxvt -name global;"
 
 i3-msg "workspace 10; exec enpass"
+i3-msg "workspace 10; exec spotify"
+i3-msg "workspace 10; exec discord"

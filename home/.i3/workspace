@@ -24,7 +24,7 @@ i3-msg "workspace $WORKSPACE; exec urxvt -name code -e /usr/sbin/zsh -is eval 'c
 sleep 3
 
 WORKSPACE=5
-PROJECT=~/dev/projects/stars-group
+PROJECT=~/dev/projects/astrum
 i3-msg "workspace $WORKSPACE; append_layout ~/.i3/code.json"
 i3-msg "workspace $WORKSPACE; exec code-oss -w $PROJECT;"
 i3-msg "workspace $WORKSPACE; exec urxvt -name code -e /usr/sbin/zsh -is eval 'cd $PROJECT';"
@@ -32,7 +32,7 @@ i3-msg "workspace $WORKSPACE; exec urxvt -name code -e /usr/sbin/zsh -is eval 'c
 sleep 3
 
 WORKSPACE=6
-PROJECT=~/dev/projects/cdn-analytics
+PROJECT=~/dev/projects/coinbits
 i3-msg "workspace $WORKSPACE; append_layout ~/.i3/code.json"
 i3-msg "workspace $WORKSPACE; exec code-oss -w $PROJECT;"
 i3-msg "workspace $WORKSPACE; exec urxvt -name code -e /usr/sbin/zsh -is eval 'cd $PROJECT';"
@@ -40,7 +40,7 @@ i3-msg "workspace $WORKSPACE; exec urxvt -name code -e /usr/sbin/zsh -is eval 'c
 sleep 3
 
 WORKSPACE=7
-PROJECT=~/dev/projects/coinbits
+PROJECT=~/dev/go/src/github.com/the-infatuation
 i3-msg "workspace $WORKSPACE; append_layout ~/.i3/code.json"
 i3-msg "workspace $WORKSPACE; exec code-oss -w $PROJECT;"
 i3-msg "workspace $WORKSPACE; exec urxvt -name code -e /usr/sbin/zsh -is eval 'cd $PROJECT';"
