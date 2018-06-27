@@ -91,3 +91,6 @@ then
 	"$@"
 	set --
 fi
+
+# added by travis gem
+[ -f /home/dax/.travis/travis.sh ] && source /home/dax/.travis/travis.sh
