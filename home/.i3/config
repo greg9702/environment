@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-# gaps inner 0
+gaps inner 20
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -149,6 +149,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	mode hide
+	modifier Mod1
         status_command i3blocks
 	font pango:Consolas 11
 	position top
@@ -179,5 +181,4 @@ exec --no-startup-id nm-applet
 exec --no-startup-id compton
 exec --no-startup-id dunst
 exec --no-startup-id ~/.i3/main
-
-# Media
+exec --no-startup-id feh --bg-scale ~/docs/wallpaper/current

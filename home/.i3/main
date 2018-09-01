@@ -1,10 +1,11 @@
 #/bin/bash
 
-i3-msg "workspace 1; append_layout ~/.i3/main.json;"
+i3-msg "workspace 1; append_layout ~/.i3/main2.json;"
 i3-msg "workspace 1; exec firefox-developer-edition;"
-i3-msg "workspace 1; exec slack;"
+i3-msg "workspace 1; exec slack -f;"
 i3-msg "workspace 1; exec google-chrome-stable"
 i3-msg "workspace 1; exec urxvt -name global;"
+sleep 5
 
 i3-msg "workspace 10; exec enpass"
 i3-msg "workspace 10; exec spotify"
