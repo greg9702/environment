@@ -2,7 +2,7 @@ urxvt*foreground: white
 urxvt*background: black
 
 URxvt.scrollBar: false
-URxvt.font: xft:Consolas:antialias=true:size=12
+URxvt.font:xft:Hasklig:antialias=true:size=12
 
 URxvt.perl-ext-common: selection-to-clipboard,clipboard
 URxvt.iso14755: False

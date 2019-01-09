@@ -1,7 +1,7 @@
 #/bin/bash
 WORKSPACE=2
 PROJECT=~/dev/projects/ridehealth
-i3-msg "workspace $WORKSPACE; append_layout ~/.i3/code.json"
+i3-msg "workspace $WORKSPACE; append_layout ~/.i3/workspace.json"
 i3-msg "workspace $WORKSPACE; exec code-oss -w $PROJECT;"
 i3-msg "workspace $WORKSPACE; exec urxvt -name code -e /usr/sbin/zsh -is eval 'cd $PROJECT';"
 i3-msg "workspace $WORKSPACE; exec urxvt -name code -e /usr/sbin/zsh -is eval 'cd $PROJECT';"
