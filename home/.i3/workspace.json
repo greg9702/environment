@@ -1,45 +1,16 @@
 // vim:ts=4:sw=4:et
 {
-    "border": "none",
-    "current_border_width": 0,
-    "floating": "auto_off",
-    "geometry": {
-        "height": 768,
-        "width": 1024,
-        "x": 5248,
-        "y": 696
-    },
-    "name": "workspace.json - .i3 - Code - OSS",
-    "percent": 0.8,
-    "swallows": [
-        {
-            "class": "^code\\-oss$"
-            // "instance": "^code\\-oss$",
-            // "title": "^workspace\\.json\\ \\-\\ \\.i3\\ \\-\\ Code\\ \\-\\ OSS$",
-            // "window_role": "^browser\\-window$"
-        }
-    ],
-    "type": "con"
-}
-
-{
     // splitv split container with 3 children
     "border": "pixel",
     "floating": "auto_off",
     "layout": "splitv",
-    "percent": 0.2,
+    "percent": 0.25,
     "type": "con",
     "nodes": [
         {
             "border": "pixel",
             "current_border_width": 0,
             "floating": "auto_off",
-            "geometry": {
-                "height": 1280,
-                "width": 1707,
-                "x": 0,
-                "y": 0
-            },
             "name": "Alacritty",
             "percent": 0.333333333333333,
             "swallows": [
@@ -55,12 +26,6 @@
             "border": "pixel",
             "current_border_width": 0,
             "floating": "auto_off",
-            "geometry": {
-                "height": 1280,
-                "width": 1707,
-                "x": 0,
-                "y": 0
-            },
             "name": "Alacritty",
             "percent": 0.333333333333333,
             "swallows": [
@@ -76,12 +41,6 @@
             "border": "pixel",
             "current_border_width": 0,
             "floating": "auto_off",
-            "geometry": {
-                "height": 1280,
-                "width": 1707,
-                "x": 0,
-                "y": 0
-            },
             "name": "Alacritty",
             "percent": 0.333333333333333,
             "swallows": [
@@ -94,4 +53,21 @@
             "type": "con"
         }
     ]
+}
+
+{
+    "border": "none",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "name": "workspace.json - .i3 - Code - OSS",
+    "percent": 0.75,
+    "swallows": [
+        {
+            "class": "^Code$"
+            // "instance": "^code\\-oss$",
+            // "title": "^workspace\\.json\\ \\-\\ \\.i3\\ \\-\\ Code\\ \\-\\ OSS$",
+            // "window_role": "^browser\\-window$"
+        }
+    ],
+    "type": "con"
 }
