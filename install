@@ -38,6 +38,7 @@ sudo pacman -S --noconfirm compton
 sudo pacman -S --noconfirm alacritty
 sudo pacman -S --noconfirm xclip
 sudo pacman -S --noconfirm zsh
+chsh -s /bin/zsh
 sudo pacman -S --noconfirm autojump
 
 # ZSH
