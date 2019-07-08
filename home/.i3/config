@@ -179,5 +179,5 @@ for_window [class="google-chrome"] border none
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
 exec --no-startup-id dunst
-exec --no-startup-id ~/.i3/main
+# exec --no-startup-id ~/.i3/main
 exec --no-startup-id feh --randomize --bg-fill /home/dax/docs/wallpaper

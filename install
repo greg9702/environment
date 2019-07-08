@@ -46,6 +46,10 @@ rm -rf $HOME/.oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
 # Fonts
-yaourt -S consolas-font --noconfirm
-yaourt -S ttf-liberation --noconfirm
+yay -S consolas-font --noconfirm
+yay -S ttf-liberation --noconfirm
