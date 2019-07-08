@@ -35,8 +35,7 @@ sudo pacman -S --noconfirm xorg-xrandr
 sudo pacman -S --noconfirm compton
 
 # Setup terminal
-sudo pacman -S --noconfirm rxvt-unicode
-sudo pacman -S --noconfirm urxvt-perls
+sudo pacman -S --noconfirm alacritty
 sudo pacman -S --noconfirm xclip
 sudo pacman -S --noconfirm zsh
 sudo pacman -S --noconfirm autojump
