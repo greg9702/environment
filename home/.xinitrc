@@ -1,4 +1,3 @@
 xrdb ~/.Xresources
-~/.screenlayout/dual.sh
-xrandr --dpi 96x96
+source ~/.screenlayout/screen.sh
 exec i3

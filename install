@@ -53,3 +53,5 @@ makepkg -si
 # Fonts
 yay -S consolas-font --noconfirm
 yay -S ttf-liberation --noconfirm
+yay -S ttf-dejavu --noconfirm
+yay -S otf-hasklig --noconfirm
