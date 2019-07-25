@@ -13,7 +13,7 @@
    "percent": 0.45,
    "swallows": [
       {
-         "class": "^firefoxdeveloperedition$"
+         "class": "^Firefox\\ Developer\\ Edition$"
          // "instance": "^Navigator$",
          // "title": "^Ride\\ Health\\ \\-\\ Firefox\\ Developer\\ Edition$",
          // "window_role": "^browser$"
@@ -46,8 +46,8 @@
             {
                "class": "^Slack$",
                "instance": "^slack$",
-               // "title": "^Slack\\ \\-\\ .*$",
-               // "transient_for": "^$",
+               "title": "^Slack\\ \\-\\ .*$",
+               "transient_for": "^$",
                "window_role": "^browser\\-window$"
             }
          ],

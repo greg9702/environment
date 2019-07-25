@@ -9,9 +9,9 @@ i3-msg "workspace 1; exec alacritty;"
 i3-msg "workspace 1; exec alacritty;"
 sleep 5
 
-i3-msg "workspace 10; exec enpass"
-i3-msg "workspace 10; exec spotify"
-i3-msg "workspace 10; exec discord"
+# i3-msg "workspace 10; exec enpass"
+# i3-msg "workspace 10; exec spotify"
+# i3-msg "workspace 10; exec discord"
 i3-msg "workspace 10; exec pavucontrol"
-i3-msg "workspace 10; exec keepass"
+# i3-msg "workspace 10; exec keepass"
 i3-msg "workspace 10; exec barrier"

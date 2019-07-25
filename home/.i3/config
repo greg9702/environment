@@ -151,7 +151,7 @@ bindsym $mod+r mode "resize"
 bar {
 	mode hide
 	modifier Mod1
-        status_command i3blocks
+        status_command i3status
 	font pango:Consolas 11
 	position top
 	# tray_output primary
@@ -178,6 +178,7 @@ for_window [class="google-chrome"] border none
 # Startup
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
+exec --no-startup-id camera-monitor
 exec --no-startup-id dunst
-# exec --no-startup-id ~/.i3/main
+exec --no-startup-id ~/.i3/$HOST/main
 exec --no-startup-id feh --randomize --bg-fill /home/dax/docs/wallpaper
