@@ -63,7 +63,7 @@
     "percent": 0.75,
     "swallows": [
         {
-            "class": "^Code$"
+            "class": "^code\\-oss$"
             // "instance": "^code\\-oss$",
             // "title": "^workspace\\.json\\ \\-\\ \\.i3\\ \\-\\ Code\\ \\-\\ OSS$",
             // "window_role": "^browser\\-window$"

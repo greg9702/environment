@@ -85,6 +85,8 @@ for f in ~/dev/environment/custom/*; do source $f; done
 
 autoload -U promptinit
 promptinit
+autoload -U compinit
+compinit
 setopt NO_BEEP
 
 if [[ $1 == eval ]]
@@ -95,3 +97,5 @@ fi
 
 # added by travis gem
 [ -f /home/dax/.travis/travis.sh ] && source /home/dax/.travis/travis.sh
+
+source /home/dax/.config/broot/launcher/bash/br
