@@ -11,7 +11,6 @@ link() {
 	ln -s $SOURCE $DEST
 }
 
-sudo pacman -Ssy
 
 # home
 shopt -s dotglob
@@ -26,6 +25,8 @@ for file in $PWD/config/*; do
 	name=${file##*/}
 	link config/$name .config/$name
 done
+
+sudo pacman -Ssy
 
 # Setup i3
 sudo pacman -S --noconfirm i3-gaps

@@ -1,153 +1,146 @@
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.3,
+    "type": "con",
+    "nodes": [
+      {
+        "border": "pixel",
+        "current_border_width": 0,
+        "floating": "auto_off",
+        "geometry": {
+          "height": 922,
+          "width": 2065,
+          "x": 20,
+          "y": 20
+        },
+        "name": "slack",
+        "percent": 0.65,
+        "swallows": [
+          {
+            "class": "^Slack$"
+          }
+        ],
+        "type": "con"
+      },
+      {
+        "border": "pixel",
+        "current_border_width": 0,
+        "floating": "user_off",
+        "geometry": {
+          "height": 2120,
+          "width": 1890,
+          "x": 1940,
+          "y": 30
+        },
+        "name": "media",
+        "percent": 0.35,
+        "swallows": [
+          {
+            "class": "^Google\\-chrome$"
+          }
+        ],
+        "type": "con"
+      }
+    ]
+  }
+
 // vim:ts=4:sw=4:et
 {
-   "border": "pixel",
-   "current_border_width": 0,
-   "floating": "auto_off",
-   "geometry": {
-      "height": 0,
-      "width": 0,
-      "x": 0,
-      "y": 0
-   },
-   "name": "Ride Health - Firefox Developer Edition",
-   "percent": 0.45,
-   "swallows": [
-      {
-         "class": "^Firefox\\ Developer\\ Edition$"
-         // "instance": "^Navigator$",
-         // "title": "^Ride\\ Health\\ \\-\\ Firefox\\ Developer\\ Edition$",
-         // "window_role": "^browser$"
-      }
-   ],
-   "type": "con"
-}
-
-{
-   // splitv split container with 2 children
-   "border": "pixel",
-   "floating": "auto_off",
-   "layout": "splitv",
-   "percent": 0.3,
-   "type": "con",
-   "nodes": [
-      {
-         "border": "pixel",
-         "current_border_width": 0,
-         "floating": "auto_off",
-         "geometry": {
-            "height": 0,
-            "width": 0,
-            "x": 0,
-            "y": 0
-         },
-         "name": "Slack",
-         "percent": 0.65,
-         "swallows": [
-            {
-               "class": "^Slack$",
-               "instance": "^slack$",
-               "title": "^Slack\\ \\-\\ .*$",
-               "transient_for": "^$",
-               "window_role": "^browser\\-window$"
-            }
-         ],
-         "type": "con"
+  // splith split container with 2 children
+  "border": "pixel",
+  "floating": "auto_off",
+  "layout": "splith",
+  "percent": 0.7,
+  "type": "con",
+  "nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": 0,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 1050,
+        "width": 1480,
+        "x": 1275,
+        "y": 20
       },
-      {
-         "border": "pixel",
-         "current_border_width": 0,
-         "floating": "auto_off",
-         "geometry": {
-            "height": 0,
-            "width": 0,
+      "name": "browser",
+      "percent": 0.6,
+      "swallows": [
+        {
+          "class": "^firefoxdeveloperedition$"
+        }
+      ],
+      "type": "con"
+    },
+    {
+      // splitv split container with 3 children
+      "border": "pixel",
+      "floating": "auto_off",
+      "layout": "splitv",
+      "percent": 0.4,
+      "type": "con",
+      "nodes": [
+        {
+          "border": "pixel",
+          "current_border_width": 0,
+          "floating": "auto_off",
+          "geometry": {
+            "height": 365,
+            "width": 565,
             "x": 0,
             "y": 0
-         },
-         "name": "New Tab - Google Chrome",
-         "percent": 0.333333333333333,
-         "swallows": [
+          },
+          "name": "Alacritty",
+          "percent": 0.333333333333333,
+          "swallows": [
             {
-               "class": "^Google\\-chrome$"
-               // "instance": "^google\\-chrome$",
-               // "title": "^New\\ Tab\\ \\-\\ Google\\ Chrome$",
-               // "window_role": "^browser$"
+              "class": "^Alacritty$"
             }
-         ],
-         "type": "con"
-      }
-   ]
-}
-
-{
-   // splitv split container with 3 children
-   "border": "pixel",
-   "floating": "auto_off",
-   "layout": "splitv",
-   "percent": 0.25,
-   "type": "con",
-   "nodes": [
-      {
-         "border": "pixel",
-         "current_border_width": 0,
-         "floating": "auto_off",
-         "geometry": {
-            "height": 0,
-            "width": 0,
+          ],
+          "type": "con"
+        },
+        {
+          "border": "pixel",
+          "current_border_width": 0,
+          "floating": "auto_off",
+          "geometry": {
+            "height": 365,
+            "width": 565,
             "x": 0,
             "y": 0
-         },
-         "name": "Alacritty",
-         "percent": 0.333333333333333,
-         "swallows": [
+          },
+          "name": "Alacritty",
+          "percent": 0.333333333333333,
+          "swallows": [
             {
-               "class": "^Alacritty$"
-               // "instance": "^Alacritty$",
-               // "title": "^Alacritty$"
+              "class": "^Alacritty$"
             }
-         ],
-         "type": "con"
-      },
-      {
-         "border": "pixel",
-         "current_border_width": 0,
-         "floating": "auto_off",
-         "geometry": {
-            "height": 0,
-            "width": 0,
+          ],
+          "type": "con"
+        },
+        {
+          "border": "pixel",
+          "current_border_width": 0,
+          "floating": "auto_off",
+          "geometry": {
+            "height": 365,
+            "width": 565,
             "x": 0,
             "y": 0
-         },
-         "name": "Alacritty",
-         "percent": 0.333333333333333,
-         "swallows": [
+          },
+          "name": "Alacritty",
+          "percent": 0.333333333333333,
+          "swallows": [
             {
-               "class": "^Alacritty$"
-               // "instance": "^Alacritty$",
-               // "title": "^Alacritty$"
+              "class": "^Alacritty$"
             }
-         ],
-         "type": "con"
-      },
-      {
-         "border": "pixel",
-         "current_border_width": 0,
-         "floating": "auto_off",
-         "geometry": {
-            "height": 0,
-            "width": 0,
-            "x": 0,
-            "y": 0
-         },
-         "name": "Alacritty",
-         "percent": 0.333333333333333,
-         "swallows": [
-            {
-               "class": "^Alacritty$"
-               // "instance": "^Alacritty$",
-               // "title": "^Alacritty$"
-            }
-         ],
-         "type": "con"
-      }
-   ]
+          ],
+          "type": "con"
+        }
+      ]
+    }
+  ]
 }

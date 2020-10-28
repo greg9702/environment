@@ -47,7 +47,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump npm)
+plugins=(git autojump npm nix-shell)
 
 # User configuration
 
@@ -98,4 +98,6 @@ fi
 # added by travis gem
 [ -f /home/dax/.travis/travis.sh ] && source /home/dax/.travis/travis.sh
 
-source /home/dax/.config/broot/launcher/bash/br
+if [ -e /home/dax/.nix-profile/etc/profile.d/nix.sh ]; then . /home/dax/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

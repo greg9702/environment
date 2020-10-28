@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/dax/dev/projects/blvd/Dashboard/scripts'
+let g:netrw_dirhist_4='/home/dax/dev/projects/ironbay/nori/web'
+let g:netrw_dirhist_3='/home/dax/dev/projects/ironbay/nori'
+let g:netrw_dirhist_2='/home/dax/dev/projects/ironbay/nori/.elixir_ls'
+let g:netrw_dirhist_1='/home/dax/dev/projects/ironbay/nori'

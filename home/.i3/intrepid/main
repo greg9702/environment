@@ -1,18 +1,15 @@
 #/bin/bash
 
-i3-msg "workspace 1; append_layout ~/.i3/main.json;"
+i3-msg "workspace 1; append_layout ~/.i3/intrepid/main.json;"
+i3-msg "workspace 1; exec google-chrome-stable;"
 i3-msg "workspace 1; exec firefox-developer-edition;"
 i3-msg "workspace 1; exec slack -f;"
-i3-msg "workspace 1; exec google-chrome-stable"
 i3-msg "workspace 1; exec alacritty;"
 i3-msg "workspace 1; exec alacritty;"
 i3-msg "workspace 1; exec alacritty;"
 sleep 5
 
-# i3-msg "workspace 10; exec enpass"
 i3-msg "workspace 10; exec spotify"
 i3-msg "workspace 10; exec discord"
 i3-msg "workspace 10; exec pavucontrol"
-# i3-msg "workspace 10; exec keepass"
 i3-msg "workspace 10; exec barrier"
-# i3-msg "workspace 10; exec firefox-developer-edition --new-window moz-extension://d1a2c670-5cbe-49f2-80b2-0e16ed07b816/list/manage.html"     
