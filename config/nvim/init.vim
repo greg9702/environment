@@ -4,18 +4,32 @@ Plug 'scrooloose/nerdtree'
 Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'tpope/vim-fugitive'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
+
+" Elixir
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'elixir-editors/vim-elixir'
+
+" Typescript
+Plug 'HerringtonDarkholme/yats.vim'
+
+" Terraform
 Plug 'hashivim/vim-terraform'
+let g:terraform_fmt_on_save=1
+
+
 Plug 'fatih/vim-go'
 
 " Javascript
 call plug#end()
 
 
-syntax enable
+syntax on
 set termguicolors
 colorscheme tokyonight
 
@@ -27,6 +41,9 @@ set shiftwidth=2      " Number of spaces to use for each step of (auto)indent.
 set expandtab         " insert tab with right amount of spacing
 set shiftround        " Round indent to multiple of 'shiftwidth'
 set mouse=a           " enable mouse (selection, resizing windows)
+set foldlevel=99      " default to unfolded
+set foldmethod=indent
+set foldenable
 
 
 " remove highlighting on escape
@@ -122,13 +139,5 @@ let g:NERDTreeShowHidden = 1
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>nf :NERDTreeFind<CR>
 
-" closetag
 
-" filenames like *.xml, *.html, *.xhtml, ...
-" These are the file extensions where this plugin is enabled.
-let g:closetag_filenames = '*.html,*.tsx,*.jsx'
-let g:closetag_regions = {
-    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
-    \ 'javascript.jsx': 'jsxRegion',
-    \ }
-
+let g:vim_jsx_pretty_colorful_config = 1 " default 0
