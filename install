@@ -34,6 +34,7 @@ sudo pacman -S --noconfirm xorg-server
 sudo pacman -S --noconfirm xorg-xinit
 sudo pacman -S --noconfirm xorg-xrandr
 sudo pacman -S --noconfirm compton
+sudo pacman -S --noconfirm rofi
 
 # Setup terminal
 sudo pacman -S --noconfirm alacritty
