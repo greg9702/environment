@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnType": true,
+  "codeLens.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "markdown",
     "javascript",
@@ -10,5 +11,14 @@
     "graphql",
     "elixir",
     "eelixir"
-  ]
+  ],
+  "languageserver": {
+    "rescript": {
+      "enable": true,
+      "module": "~/.vim/plugged/vim-rescript/rescript-vscode/extension/server/out/server.js",
+      "args": ["--node-ipc"],
+      "filetypes": ["rescript"],
+      "rootPatterns": ["bsconfig.json"]
+    }
+  }
 }

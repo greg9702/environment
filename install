@@ -27,6 +27,7 @@ for file in $PWD/config/*; do
 done
 
 sudo pacman -Ssy
+sudo pacman -S base-devel
 
 # Setup i3
 sudo pacman -S --noconfirm i3-gaps

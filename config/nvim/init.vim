@@ -1,5 +1,6 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
+" Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
@@ -10,6 +11,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Plug 'ionide/Ionide-vim'
+Plug 'rescript-lang/vim-rescript'
+Plug 'gleam-lang/gleam.vim'
 
 " Elixir
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
