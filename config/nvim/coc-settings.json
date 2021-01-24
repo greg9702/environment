@@ -12,6 +12,9 @@
     "elixir",
     "eelixir"
   ],
+  "go.goplsOptions": {
+    "gofumpt": true
+  },
   "languageserver": {
     "haskell": {
       "command": "haskell-language-server-wrapper",

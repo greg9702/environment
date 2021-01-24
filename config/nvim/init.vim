@@ -2,46 +2,27 @@
 call plug#begin('~/.vim/plugged')
 " Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
-
 Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-
 Plug 'tpope/vim-fugitive'
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'pantharshit00/vim-prisma'
-
 Plug 'lifepillar/pgsql.vim'
-
 Plug 'neovimhaskell/haskell-vim'
-
-" Plug 'ionide/Ionide-vim'
-Plug 'rescript-lang/vim-rescript'
 Plug 'gleam-lang/gleam.vim'
-
-" Elixir
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-editors/vim-elixir'
-
-" Typescript
 Plug 'HerringtonDarkholme/yats.vim'
-
 Plug 'purescript-contrib/purescript-vim'
-
-" Terraform
 Plug 'hashivim/vim-terraform'
+
 let g:terraform_fmt_on_save=1
-
-
-" Plug 'fatih/vim-go'
 
 " Javascript
 call plug#end()
@@ -49,7 +30,7 @@ call plug#end()
 
 syntax on
 set termguicolors
-colorscheme night-owl
+colorscheme tokyonight
 
 " Numbers
 set number

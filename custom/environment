@@ -11,7 +11,7 @@ export PATH=$PATH:$HOME/.nix-profile/bin
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-export GOPATH=~/dev/go
+export GOPATH=~/dev/gopath
 
 export EDITOR=nvim
 export BROWSER=firefox-developer-edition
