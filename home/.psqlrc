@@ -14,7 +14,7 @@
 -- Show how long each query takes to execute
 \timing
 -- Use best available output format
-\x auto
+-- \x auto
 \set VERBOSITY verbose
 \set HISTFILE ~/tmp/.psql_history/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups

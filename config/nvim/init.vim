@@ -1,32 +1,19 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
-" Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  "
 Plug 'scrooloose/nerdtree'
-Plug 'rakr/vim-one'
-Plug 'joshdick/onedark.vim'
 Plug 'ghifarit53/tokyonight-vim'
-Plug 'haishanh/night-owl.vim'
-Plug 'morhetz/gruvbox'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'pantharshit00/vim-prisma'
 Plug 'lifepillar/pgsql.vim'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'gleam-lang/gleam.vim'
-Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-editors/vim-elixir'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'purescript-contrib/purescript-vim'
-Plug 'hashivim/vim-terraform'
+Plug 'pantharshit00/vim-prisma'
 
 let g:terraform_fmt_on_save=1
 
 " Javascript
 call plug#end()
-
 
 syntax on
 set termguicolors
@@ -48,6 +35,15 @@ set foldenable
 
 " remove highlighting on escape
 nnoremap <silent> <esc> :nohlsearch<cr>
+
+" treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  }
+}
+EOF
 
 " Coc
 nnoremap <silent> K :call <SID>show_documentation()<CR>

@@ -9,6 +9,8 @@ export PATH=$PATH:$HOME/dev/boom
 export PATH=$PATH:$HOME/.okta/bin
 export PATH=$PATH:$HOME/.nix-profile/bin
 
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages
+
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 export GOPATH=~/dev/gopath
