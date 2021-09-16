@@ -1,3 +1,19 @@
+set number
+set numberwidth=1
+set signcolumn=yes:1
+set tabstop=2
+set shiftwidth=2      " Number of spaces to use for each step of (auto)indent.
+set expandtab         " insert tab with right amount of spacing
+set shiftround        " Round indent to multiple of 'shiftwidth'
+set mouse=a           " enable mouse (selection, resizing windows)
+set foldlevel=99      " default to unfolded
+set foldmethod=indent
+set foldenable
+
+if exists('g:vscode')
+  " VSCode extension
+  nnoremap <silent> za <Cmd>call VSCodeNotify('editor.toggleFold')<CR>
+else
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -9,6 +25,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'pantharshit00/vim-prisma'
+Plug 'earthly/earthly.vim', { 'branch': 'main' }
+Plug 'LnL7/vim-nix'
+Plug 'hashivim/vim-terraform'
+Plug 'jvirtanen/vim-hcl'
 
 let g:terraform_fmt_on_save=1
 
@@ -137,3 +157,4 @@ nnoremap <Leader>nf :NERDTreeFind<CR>
 
 
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
+endif

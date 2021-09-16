@@ -10,12 +10,20 @@
     "json",
     "graphql",
     "elixir",
-    "eelixir"
+    "eelixir",
+    "go"
   ],
   "go.goplsOptions": {
     "gofumpt": true
   },
   "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    },
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],

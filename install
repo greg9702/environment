@@ -26,7 +26,7 @@ for file in $PWD/config/*; do
 	link config/$name .config/$name
 done
 
-sudo pacman -Ssy
+# sudo pacman -Ssy
 sudo pacman -S base-devel
 
 # Setup i3
@@ -35,14 +35,12 @@ sudo pacman -S --noconfirm xorg-server
 sudo pacman -S --noconfirm xorg-xinit
 sudo pacman -S --noconfirm xorg-xrandr
 sudo pacman -S --noconfirm compton
-sudo pacman -S --noconfirm rofi
 
 # Setup terminal
 sudo pacman -S --noconfirm alacritty
 sudo pacman -S --noconfirm xclip
 sudo pacman -S --noconfirm zsh
 chsh -s /bin/zsh
-sudo pacman -S --noconfirm autojump
 
 # ZSH
 rm -rf $HOME/.oh-my-zsh
@@ -58,3 +56,4 @@ yay -S consolas-font --noconfirm
 yay -S ttf-liberation --noconfirm
 yay -S ttf-dejavu --noconfirm
 yay -S otf-hasklig --noconfirm
+yay -S autojump

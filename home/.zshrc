@@ -47,7 +47,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump npm dotenv)
+plugins=(git autojump npm)
 
 # User configuration
 
@@ -87,17 +87,15 @@ autoload -U promptinit
 promptinit
 autoload -U compinit
 compinit
+autoload -U bashcompinit
+bashcompinit
 setopt NO_BEEP
+complete -C aws_completer aws
 
 if [[ $1 == eval ]]
 then
 	"$@"
 	set --
 fi
-
-# added by travis gem
-[ -f /home/dax/.travis/travis.sh ] && source /home/dax/.travis/travis.sh
-
-if [ -e /home/dax/.nix-profile/etc/profile.d/nix.sh ]; then . /home/dax/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

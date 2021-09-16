@@ -9,21 +9,28 @@
       "border": "pixel",
       "floating": "auto_off",
       "layout": "splitv",
-      "percent": 0.65,
+      "percent": 0.75,
+      "type": "con",
+      "name": "vim",
+      "swallows": [
+        {
+          "class": "^Alacritty$"
+        }
+      ]
+    },
+    {
+      "border": "pixel",
+      "floating": "auto_off",
+      "layout": "splitv",
+      "percent": 0.25,
       "type": "con",
       "nodes": [
         {
-          "border": "none",
+          "border": "pixel",
           "current_border_width": 0,
           "floating": "auto_off",
-          "geometry": {
-            "height": 2120,
-            "width": 2850,
-            "x": 970,
-            "y": 20
-          },
-          "name": "vim",
-          "percent": 0.8,
+          "name": "Alacritty",
+          "percent": 0.25,
           "swallows": [
             {
               "class": "^Alacritty$"
@@ -33,94 +40,39 @@
         },
         {
           "border": "pixel",
+          "current_border_width": 0,
           "floating": "auto_off",
-          "layout": "splith",
-          "percent": 0.2,
-          "type": "con",
-          "nodes": [
+          "name": "Alacritty",
+          "percent": 0.25,
+          "swallows": [
             {
-              "border": "pixel",
-              "current_border_width": 0,
-              "floating": "auto_off",
-              "geometry": {
-                "height": 365,
-                "width": 565,
-                "x": 0,
-                "y": 0
-              },
-              "name": "Alacritty",
-              "percent": 0.333333333333333,
-              "swallows": [
-                {
-                  "class": "^Alacritty$"
-                }
-              ],
-              "type": "con"
-            },
-            {
-              "border": "pixel",
-              "current_border_width": 0,
-              "floating": "auto_off",
-              "geometry": {
-                "height": 365,
-                "width": 565,
-                "x": 0,
-                "y": 0
-              },
-              "name": "Alacritty",
-              "percent": 0.333333333333333,
-              "swallows": [
-                {
-                  "class": "^Alacritty$"
-                }
-              ],
-              "type": "con"
-            },
-            {
-              "border": "pixel",
-              "current_border_width": 0,
-              "floating": "auto_off",
-              "geometry": {
-                "height": 365,
-                "width": 565,
-                "x": 0,
-                "y": 0
-              },
-              "name": "Alacritty",
-              "percent": 0.333333333333333,
-              "swallows": [
-                {
-                  "class": "^Alacritty$"
-                }
-              ],
-              "type": "con"
+              "class": "^Alacritty$"
             }
-          ]
-        }
-      ]
-    },
-    {
-      "border": "pixel",
-      "floating": "auto_off",
-      "layout": "splitv",
-      "percent": 0.35,
-      "type": "con",
-      "nodes": [
+          ],
+          "type": "con"
+        },
         {
           "border": "pixel",
           "current_border_width": 0,
           "floating": "auto_off",
-          "geometry": {
-            "height": 2120,
-            "width": 1593,
-            "x": 1172,
-            "y": 30
-          },
-          "name": "Firefox",
-          "percent": 1,
+          "name": "Alacritty",
+          "percent": 0.25,
           "swallows": [
             {
-              "class": "^firefoxdeveloperedition$"
+              "class": "^Alacritty$"
+            }
+          ],
+          "type": "con"
+        },
+        {
+          "border": "pixel",
+          "current_border_width": 0,
+          "floating": "auto_off",
+          "name": "Alacritty",
+          "percent": 0.25,
+          "swallows": [
+            {
+              "class": "^Alacritty$"
             }
           ],
           "type": "con"
