@@ -150,7 +150,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	mode hide
-	modifier Mod1
+	modifier Mod4
   status_command i3status
 	# font pango:Consolas 11
 	position top
@@ -160,7 +160,7 @@ bar {
 
 bar {
 	mode hide
-	modifier Mod1
+	modifier Mod4
 	# font pango:Consolas 11
 	position top
 	tray_output none
