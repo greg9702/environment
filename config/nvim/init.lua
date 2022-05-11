@@ -56,7 +56,7 @@ vim.o.mouse = "a"
 vim.o.foldlevel = 99
 vim.o.foldmethod = "indent"
 vim.o.foldenable = true
-vim.o.termguicolors = true
+vim.o.termguicolors = false
 vim.o.signcolumn = "yes"
 vim.g.tokyonight_style = "night"
 vim.cmd[[colorscheme tokyonight]]
@@ -76,12 +76,13 @@ require'nvim-treesitter.configs'.setup {
 require'nvim-tree'.setup {
   filters = {
     custom = {".git", "node_modules", ".build", ".vscode"}
+  },
+  git = {
+    ignore = 1
   }
 }
--- vim.g.nvim_tree_ignore = {".git", "node_modules", ".build", ".vscode"}
-vim.g.nvim_tree_gitignore = 1
 map('n', '<C-n>', ':NvimTreeToggle<CR>', default_opts)
-map('n', '<C-m>', ':NvimTreeFindFile<CR>', default_opts)
+map('n', '<C-j>', ':NvimTreeFindFile<CR>', default_opts)
 
 -- LSP
 local nvim_lsp = require('lspconfig')
@@ -144,7 +145,7 @@ map('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', default_opts)
 map('n', '<Leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', default_opts)
 map('n', '<Leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', default_opts)
 map('n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', default_opts)
-map('n', '<Leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', default_opts)
+map('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', default_opts)
 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', default_opts)
 map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', default_opts)
 map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', default_opts)
@@ -225,7 +226,7 @@ require('formatter').setup({
 vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.ts,*.tsx,*.js,*.jsx,*.json,*.graphql FormatWrite
+  autocmd BufWritePost *.ts,*.tsx,*.mjs,*.js,*.jsx,*.json,*.graphql FormatWrite
 augroup END
 ]], true)
 

@@ -1,5 +1,4 @@
 #PS1='\[\e[1;30m\]\h:\w\[\e[m\] \[\e[1;37m\]\$\[\e[m\] \[\e[1;37m\]'
-export TERM=screen-256color
 
 SSH_ENV="$HOME/.ssh/agent-environment"
 
@@ -40,7 +39,7 @@ export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 export EDITOR=nvim
-export BROWSER=firefox-developer-edition
+export BROWSER=google-chrome-stable
 export GOPATH=/home/thdxr/dev/gopath
 
 chpwd() {
