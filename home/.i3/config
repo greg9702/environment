@@ -187,7 +187,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-for_window [class="google-chrome"] border none
+default_border pixel 0
+default_floating_border pixel 0
+for_window [class="^.*"] border pixel 0
 
 # Startup
 exec --no-startup-id picom

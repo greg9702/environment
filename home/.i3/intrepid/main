@@ -7,9 +7,13 @@ i3-msg "workspace 2; append_layout ~/.i3/intrepid/main.json;"
 i3-msg "workspace 2; exec google-chrome-stable;"
 i3-msg "workspace 2; move workspace to output left"
 
+i3-msg "workspace 8, move workspace to output left"
+
+i3-msg "workspace 10, move workspace to output left"
 i3-msg "workspace 10; exec discord"
 i3-msg "workspace 10; exec barrier"
 i3-msg "workspace 10; exec pavucontrol"
+i3-msg "workspace 10; exec aw-qt"
 sleep 3
 
 # i3-msg "workspace 3; append_layout ~/.i3/intrepid/browser.json;"

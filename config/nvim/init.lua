@@ -56,9 +56,12 @@ vim.o.mouse = "a"
 vim.o.foldlevel = 99
 vim.o.foldmethod = "indent"
 vim.o.foldenable = true
-vim.o.termguicolors = false
+vim.o.notermguicolors = true
 vim.o.signcolumn = "yes"
-vim.g.tokyonight_style = "night"
+require("tokyonight").setup({
+  style = "night"
+})
+vim.g.tokyonight_style = "light"
 vim.cmd[[colorscheme tokyonight]]
 map("n", "<esc>", ":nohlsearch<CR>", default_opts)
 
@@ -75,10 +78,10 @@ require'nvim-treesitter.configs'.setup {
 -- Tree
 require'nvim-tree'.setup {
   filters = {
-    custom = {".git", "node_modules", ".build", ".vscode"}
+    custom = {".git", "node_modules", ".vscode"}
   },
   git = {
-    ignore = 1
+    ignore = true
   }
 }
 map('n', '<C-n>', ':NvimTreeToggle<CR>', default_opts)
@@ -96,6 +99,14 @@ end
 
 -- Servers
 
+nvim_lsp.tailwindcss.setup{}
+nvim_lsp.astro.setup{
+  init_options = {
+    typescript = {
+      serverPath = "/usr/lib/node_modules/typescript/lib/tsserverlibrary.js"
+    }
+  }
+}
 nvim_lsp.prismals.setup{}
 nvim_lsp.tsserver.setup{}
 -- nvim_lsp.eslint.setup{}
@@ -195,7 +206,7 @@ map("n", "<C-t>", "<cmd>Telescope<CR>", default_opts)
 map("n", "<C-f>", "<cmd>Telescope live_grep<CR>", default_opts)
 require("telescope").setup{
   defaults = {
-    file_ignore_patters = { "yarn.lock" }
+    file_ignore_patters = { "yarn.lock", "node_modules/*" }
   }
 }
 
@@ -204,6 +215,12 @@ require("telescope").setup{
 local formatter_prettier =  {
   function()
     return {
+      -- exe = "prettier",
+      -- args = {
+      --   "--stdin-filepath",
+      --   vim.api.nvim_buf_get_name(0)
+      -- },
+      -- stdin = true,
       exe = "prettierd",
       args = {vim.api.nvim_buf_get_name(0)},
       stdin = true
@@ -226,14 +243,11 @@ require('formatter').setup({
 vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.ts,*.tsx,*.mjs,*.js,*.jsx,*.json,*.graphql FormatWrite
+  autocmd BufWritePost *.astro,*.ts,*.tsx,*.mjs,*.js,*.jsx,*.json,*.graphql FormatWrite
 augroup END
 ]], true)
 
 vim.api.nvim_command("autocmd BufWritePre *.ex,*.go lua vim.lsp.buf.formatting()")
-
--- Status line
--- require('feline').setup()
 
 require('wlsample.airline')
 
@@ -244,3 +258,10 @@ vim.g.copilot_tab_fallback = ""
 map('i', '<C-j>', 'copilot#Accept()', { expr = true, silent = true})
 
 
+-- vim.g.do_filetype_lua = 1
+-- vim.g.did_load_filetypes = 0
+vim.filetype.add({
+  extension = {
+    astro = "astro"
+  }
+})

@@ -100,3 +100,11 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+# bun completions
+[ -s "/home/thdxr/.bun/_bun" ] && source "/home/thdxr/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="/home/thdxr/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
