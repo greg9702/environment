@@ -1,57 +1,57 @@
-# /bin/bash
-set -e
-
-PWD=$(pwd)
-
-link() {
-	SOURCE=$PWD/$1
-	DEST=$HOME/$2
-	echo "Linking $SOURCE to $DEST"
-	rm -rf $DEST
-	ln -s $SOURCE $DEST
-}
-
-
-# home
-shopt -s dotglob
-for file in $PWD/home/*; do
-	name=${file##*/}
-	link home/$name $name
-done
-
-# configs
-mkdir -p $HOME/.config
-for file in $PWD/config/*; do
-	name=${file##*/}
-	link config/$name .config/$name
-done
-
-# sudo pacman -Ssy
-sudo pacman -S base-devel
-
-# Setup i3
-sudo pacman -S --noconfirm i3-gaps
-sudo pacman -S --noconfirm xorg-server
-sudo pacman -S --noconfirm xorg-xinit
-sudo pacman -S --noconfirm xorg-xrandr
-sudo pacman -S --noconfirm compton
+# # /bin/bash
+# set -e
+# 
+# PWD=$(pwd)
+# 
+# link() {
+# 	SOURCE=$PWD/$1
+# 	DEST=$HOME/$2
+# 	echo "Linking $SOURCE to $DEST"
+# 	rm -rf $DEST
+# 	ln -s $SOURCE $DEST
+# }
+# 
+# 
+# # home
+# shopt -s dotglob
+# for file in $PWD/home/*; do
+# 	name=${file##*/}
+# 	link home/$name $name
+# done
+# 
+# # configs
+# mkdir -p $HOME/.config
+# for file in $PWD/config/*; do
+# 	name=${file##*/}
+# 	link config/$name .config/$name
+# done
+# 
+# # sudo pacman -Ssy
+# sudo pacman -S base-devel
+# 
+# # Setup i3
+# sudo pacman -S --noconfirm i3-gaps
+# sudo pacman -S --noconfirm xorg-server
+# sudo pacman -S --noconfirm xorg-xinit
+# sudo pacman -S --noconfirm xorg-xrandr
+# sudo pacman -S --noconfirm picom
 
 # Setup terminal
-sudo pacman -S --noconfirm alacritty
-sudo pacman -S --noconfirm xclip
-sudo pacman -S --noconfirm zsh
-chsh -s /bin/zsh
-
-# ZSH
+# sudo pacman -S --noconfirm alacritty
+# sudo pacman -S --noconfirm xclip
+# sudo pacman -S --noconfirm zsh
+# chsh -s /bin/zsh
+# 
+# # ZSH
 rm -rf $HOME/.oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
-# Fonts
+# git clone https://aur.archlinux.org/yay.git
+# cd yay
+# makepkg -si
+# 
+# # Fonts
 yay -S consolas-font --noconfirm
 yay -S ttf-liberation --noconfirm
 yay -S ttf-dejavu --noconfirm

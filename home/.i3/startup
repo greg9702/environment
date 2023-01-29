@@ -1,2 +1,2 @@
 #!/bin/bash
-/home/dax/.i3/$(hostname)/main
+/home/thdxr/.i3/$(hostname)/main
