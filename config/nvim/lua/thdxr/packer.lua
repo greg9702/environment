@@ -4,6 +4,8 @@ return require('packer').startup(function()
   use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate' }
   use { "nvim-treesitter/playground" }
   use { "tpope/vim-fugitive" }
+  use { "dmmulroy/tsc.nvim" }
+
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -35,5 +37,5 @@ return require('packer').startup(function()
   use { 'ggandor/lightspeed.nvim' }
   use { "zbirenbaum/copilot.lua" }
   use { "mbbill/undotree" }
-
+  use { "nvim-treesitter/nvim-treesitter-context" }
 end)

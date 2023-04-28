@@ -194,8 +194,8 @@ for_window [class="^.*"] border pixel 0
 # Startup
 exec --no-startup-id picom
 exec --no-startup-id dunst
-exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id ~/.i3/startup
+exec --no-startup-id mechvibes --no-sandbox
 # exec --no-startup-id feh --randomize --bg-fill /home/dax/docs/wallpaper
 
 # fake-outputs 1152x2160+0+0,2688x2160+1152x0
