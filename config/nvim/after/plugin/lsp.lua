@@ -2,7 +2,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  "tsserver",
+  "vtsls",
   "gopls",
   "astro"
 })
@@ -32,13 +32,12 @@ lsp.setup_nvim_cmp({
   }
 })
 
+local opts = {buffer = bufnr, remap = false}
 lsp.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr, remap = false}
-
   -- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "gd", '<cmd>Telescope lsp_definitions<CR>', opts)
   vim.keymap.set("n", "gr", '<cmd>Telescope lsp_references<CR>', opts)
-  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+  -- vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>ws", function() vim.lsp.buf.workspace_symbol() end, opts)
   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
   vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
@@ -49,9 +48,14 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.configure("tsserver", {
-  root_dir = require("lspconfig").util.root_pattern(".git", "pnpm-workspace.yaml", "pnpm-lock.yaml", "yarn.lock", "package-lock.json", "bun.lockb"),
-})
+-- lsp.configure("tsserver", {
+--   root_dir = require("lspconfig").util.root_pattern(".git", "pnpm-workspace.yaml", "pnpm-lock.yaml", "yarn.lock", "package-lock.json", "bun.lockb"),
+--   init_options = {
+--     preferences = { 
+--       includeCompletionsForModuleExports = false 
+--     }
+--   }
+-- })
 
 lsp.setup()
 
@@ -60,3 +64,16 @@ vim.diagnostic.config({
 })
 
 require("tsc").setup()
+
+require("copilot").setup({
+  suggestion = {
+    auto_trigger = true,
+    keymap = {
+      accept = "<C-l>"
+    }
+  }
+})
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
+vim.g.copilot_tab_fallback = ""
+vim.keymap.set("i", "<C-j>", 'copilot#Accept()', { expr = true, silent = true })

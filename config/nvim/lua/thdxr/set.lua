@@ -6,14 +6,12 @@ vim.o.expandtab = true
 vim.o.shiftround = true
 vim.o.mouse = "a"
 vim.o.wrap = true
-vim.wo.wrap = true
-vim.wo.linebreak = true
 
 vim.o.signcolumn = "yes"
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.o.foldlevel = 99
 vim.o.foldmethod = "indent"
