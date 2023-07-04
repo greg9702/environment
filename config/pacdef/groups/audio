@@ -1,0 +1,8 @@
+[arch]
+alsa-utils
+pavucontrol
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
+wireplumber
