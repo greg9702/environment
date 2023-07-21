@@ -5,7 +5,7 @@ return require('packer').startup(function()
   use { "nvim-treesitter/playground" }
   use { "tpope/vim-fugitive" }
   use { "dmmulroy/tsc.nvim" }
-
+  use { "lewis6991/gitsigns.nvim" }
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
