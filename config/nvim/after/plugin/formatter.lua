@@ -35,4 +35,4 @@ vim.api.nvim_exec([[
   augroup END
 ]], true)
 
-vim.api.nvim_command("autocmd BufWritePre *.ex,*.go lua vim.lsp.buf.formatting()")
+vim.api.nvim_command("autocmd BufWritePre *.go lua vim.lsp.buf.format({formatCommand = 'gofmt -w'})")
