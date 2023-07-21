@@ -1,4 +1,4 @@
-vim.o.number = true
+vim.o.rnu = true
 vim.o.numberwidth = 1
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
