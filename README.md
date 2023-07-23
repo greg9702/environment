@@ -41,7 +41,7 @@ Repository contains some configs "borrowed" :) and tuned to my needs.
 #### Key bindings cheat-sheet
 
 - h,j,k,l - navigation
-- space - <leader>
+- space - \<leader\>
 ---
 - C-w + h,j,k,l - change window
 - :q - close window
@@ -57,19 +57,19 @@ Repository contains some configs "borrowed" :) and tuned to my needs.
 - / - grep in a file
 - /\c - grep in a file, case insensitive
 - C-f - search in all files
-- <leader>-pf - search in all files (using rg)
+- \<leader\>-pf - search in all files (using rg)
 - C-p - search in all files (using git ls-files)
 ---
 - gd - go to definition
 - gr - go to references
 - C-o - go to the previous posistion
-- <leader>-vd - show error in a pop up window
-- <leader>-ca - show error fix proposals
+- \<leader\>-vd - show error in a pop up window
+- \<leader\>-ca - show error fix proposals
 - u - undo
 - C-r - redo
 - C-u - open undo history tree
 ---
-- <leader>-gs - open git tool
+- \<leader\>-gs - open git tool
 (inside git tool)</br>
 - s - stage file
 - \- - unstage file
