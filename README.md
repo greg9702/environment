@@ -73,7 +73,7 @@ Repository contains some configs "borrowed" :) and tuned to my needs.
 (inside git tool)</br>
 - s - stage file
 - \- - unstage file
-- > - show file changes
+- \> - show file changes
 - < - hide file changes
 - = - toggle file changes
 - X - checkout file (revert unstaged changes)
