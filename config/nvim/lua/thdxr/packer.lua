@@ -8,7 +8,7 @@ return require('packer').startup(function()
   use { "lewis6991/gitsigns.nvim" } -- shows which lines were modified
 
   use {
-	  'VonHeikemen/lsp-zero.nvim', -- merges nvim-cmp and nvim-lspconfig together
+	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
 	  requires = {
 		  -- LSP Support
@@ -17,12 +17,16 @@ return require('packer').startup(function()
 		  {'williamboman/mason-lspconfig.nvim'},
 
 		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp'}, -- suggestions
-		  {'hrsh7th/cmp-buffer'}, -- in insert mode use c-p and c-n to jump between suggestion, merges suggestion buffers
-		  {'hrsh7th/cmp-path'}, -- add system path to suggestion box
-		  {'saadparwaiz1/cmp_luasnip'}, -- advanced autocomplete to docs etc
-		  {'hrsh7th/cmp-nvim-lsp'}, 
+		  {'hrsh7th/nvim-cmp'},
+		  {'hrsh7th/cmp-buffer'},
+		  {'hrsh7th/cmp-path'},
+		  {'saadparwaiz1/cmp_luasnip'},
+		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'hrsh7th/cmp-nvim-lua'},
+
+		  -- Snippets
+		  {'L3MON4D3/LuaSnip'},
+		  {'rafamadriz/friendly-snippets'},
 	  }
   }
 
