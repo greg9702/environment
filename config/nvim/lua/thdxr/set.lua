@@ -8,6 +8,7 @@ vim.o.mouse = "a"
 vim.o.wrap = true
 
 vim.o.signcolumn = "yes"
+vim.o.cursorline = true
 
 vim.opt.smartindent = true
 
