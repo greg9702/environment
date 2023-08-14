@@ -36,4 +36,6 @@ return require('packer').startup(function()
   use { 'windwp/windline.nvim' } -- status bar
   use { "mbbill/undotree" } -- undo history
   use { "nvim-treesitter/nvim-treesitter-context" } -- clever scrolling
+
+  use { 'theprimeagen/harpoon' }
 end)
